@@ -49,8 +49,8 @@ function [] = prepareCSEN(save_subdir, Dic, param)
         'x_train', 'x_test', 'y_train', 'y_test', 'x_dic', 'y_dic', ...
         'Proj_M', 'Y0', 'Y1', 'Y2', '-v6');
     
-    Dic.label_matrix;
-    save([save_path, '/dic_label.mat'], 'ans');
+%     Dic.label_matrix;
+%     save([save_path, '/dic_label.mat'], 'ans');
    
 end
 

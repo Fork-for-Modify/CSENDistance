@@ -23,7 +23,7 @@ class model:
         if not os.path.exists('CSENdata-2D/'): exit('CSENdata-2D is not prepared!')
         data = dataDir + feature_type
         dataPath = data + '_mr_' + MR + '_run' + str(set) + '.mat'
-        dic_label = scipy.io.loadmat('CSENdata-2D/dic_label' + '.mat')["ans"]
+        # dic_label = scipy.io.loadmat('CSENdata-2D/dic_label' + '.mat')["ans"]
 
         self.x_train, self.x_val, self.x_test, self.y_train, self.y_val, self.y_test = loadData(dataPath)
 

@@ -66,7 +66,18 @@ measurement_type = 'eigen'; % Gauss, eigen, or None. None means no compression.
 projection_matrix = 'l2_norm'; % minimum_norm or l2_norm.
 
 % gen test sample and load dic
-[~, train, test] = split_data(data,label,param,reallabel);
+% [~, train, test] = split_data(data,label,param,reallabel);
+
+%%
+test.data = data;
+test.reallabel = reallabel;
+test.label = label;
+
+train.data = zeros(512,0);
+train.reallabel = zeros(0,1);
+train.label = zeros(0,1);
+%%
+
 Dic = load(DicPath); Dic = Dic.Dic;
 
 % Metrics.
