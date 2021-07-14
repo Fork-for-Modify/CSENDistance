@@ -24,10 +24,10 @@ param.train_size = 0; % These are the proportations. 1:1
 param.test_size = 1;
 
 
-subdirname = 'test/';
+subdirname = 'test-parking-redgray/';
 DicPath = './data/Dic/Dic2D.mat';
 savedir = ['./results/' subdirname];
-inputData = strcat('data/features/test-data/features_max_', param.modelName, '.mat');
+inputData = strcat('data/features/test-data-parking-redgray/features_max_', param.modelName, '.mat');
 load(inputData)
 objectFeatures = double(squeeze(objectFeatures));
 angles = gtd(:, 1);
@@ -182,7 +182,7 @@ param.trainRealLabel = trainRealLabel;
 param.testRealLabel = testRealLabel;
 
 % Compute necessary variables for CSEN training and testing.
-prepareCSEN('test',Dic, param);	
+prepareCSEN(subdirname,Dic, param);	
 disp('CSEN preprocessing data saved');
 
 % save and show CRC result

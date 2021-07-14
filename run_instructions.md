@@ -27,4 +27,4 @@ matlab processTestFeatures.m
 
 ### test CL-CSEN
 
-`python regressor_main.py --method CL-CSEN --feature_type VGG19  --datadir "./data/CSENdata-2D/test/" --savedir "./results/test/"`
+`python regressor_main.py --method CL-CSEN --feature_type VGG19  --datadir "./data/CSENdata-2D/test/" --savedir "./results/test-parking-redgray/"`
